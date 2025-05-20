@@ -9,4 +9,8 @@ To start server use:
 To start client use:
     $ python client.py 
 
-Then follow along the instructions on terminal.
+Then follow along the instructions on terminal. 
+
+## Updates
+
+1) Confidentiality added: Both parties would be able to read decrypted messages if and only if they have same keys. Confidentiality updated. 
