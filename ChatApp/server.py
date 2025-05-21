@@ -1,7 +1,7 @@
 import socket
 
 server = socket.socket()
-server.bind(('localhost', 12348))
+server.bind(('localhost', 12345))
 server.listen()
 client, addr = server.accept() 
 print("Connection request from: " + str(addr))
@@ -21,7 +21,7 @@ print("You can end coversation by typing end")
 response = client.recv(1024)
 response = encrypt(response.decode(), key).decode(errors='replace')
 while True: 
-	if response == "end":
+	if response == "end" or not response:
 		print("Ending Coversation...........")
 		break
 	
@@ -38,4 +38,4 @@ while True:
 	response = encrypt(response.decode(), key).decode(errors='replace')
 
 client.close()
-
+server.close()

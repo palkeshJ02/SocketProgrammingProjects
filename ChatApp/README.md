@@ -14,3 +14,5 @@ Then follow along the instructions on terminal.
 ## Updates
 
 1) Confidentiality added: Both parties would be able to read decrypted messages if and only if they have same keys. Confidentiality updated. 
+
+2) Broken Pipe issue while closing connection resolved .

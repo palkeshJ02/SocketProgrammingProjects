@@ -1,6 +1,6 @@
 import socket
 client = socket.socket()
-client.connect(('localhost',12348))
+client.connect(('localhost',12345))
 
 
 ## Now we wiill add function to encrypt and decrypt using a key. 
@@ -25,10 +25,9 @@ while True:
 		break
 	response = client.recv(1024)
 	response = encrypt(response.decode(), key).decode(errors='replace')
-	if response == "end":
+	if response == "end" or not response: 
 		print("Ending Coversation...........")
 		break
-
 	print("Opponent : ", response)
 
 client.close()
