@@ -7,3 +7,5 @@ To start DNS server, run:
 To start client: 
 
     python3 client.py
+
+## DNS Cache added to server
